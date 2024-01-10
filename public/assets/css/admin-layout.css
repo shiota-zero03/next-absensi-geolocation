@@ -1,0 +1,82 @@
+#sidebar{
+    animation: sidebarOpen .5s 1 ease-in-out;
+    width: 250px;
+}
+#sidebar::-webkit-scrollbar{
+    width: 3px;
+}
+#sidebar.close{
+    animation: sidebarClose 1s 1 ease;
+    width: 0;
+}
+#sidebar ul{
+    animation: listSidebarOpen 1s 1 ease-out;
+}
+#sidebar.close ul{
+    animation: listSidebarClose .8s 1 ease-out;
+}
+.menu-side.active{
+    background: #fff;
+    color: #000;
+}
+.head-profile{
+    max-height: 0;
+    transition: max-height .4s ease-in-out;
+    overflow: hidden;
+}
+.head-profile.open{
+    max-height: 500px;
+    transition: max-height .5s ease-in-out;
+}
+#content{
+    z-index: 0;
+    min-height: 100vh;
+    padding: 80px 10px 80px 10px;
+}
+#sidebar + #content{
+    margin-left: 250px;
+    transition: margin-left 1s ease-in-out;
+}
+#sidebar.close + #content{
+    margin-left: 0%;
+    transition: margin-left .5s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+    #sidebar + #content{
+        margin-left: 0;
+        background-color: rgba(0, 0, 0, .1);
+    }
+    #sidebar.close + #content{
+        margin-left: 0;
+        background-color: #fff;
+    }   
+}
+@keyframes sidebarOpen{
+    from{
+        width: 0;
+    } to {
+        width: 250px;
+    }
+}
+@keyframes sidebarClose{
+    from{
+        width: 250px;
+    } to {
+        width: 0;
+    }
+}
+@keyframes listSidebarClose {
+    from{
+        margin-left: 0;
+    } to {
+        margin-left: -250px;
+    }
+}
+@keyframes listSidebarOpen {
+    from{
+        margin-left: -250px;
+    } to {
+        margin-left: 0;
+        /* margin-left: 0; */
+    }
+}

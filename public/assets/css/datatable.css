@@ -1,0 +1,43 @@
+.p-paginator-element{
+    border: .5px solid rgba(0, 0, 0, 0.2);
+    height: 40px;
+    padding: 0 10px;
+}
+.p-inputwrapper-filled{
+    position: absolute;
+    top: -35px;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 12px;
+    left: 0;
+    border: .5px solid rgba(0, 0, 0, 0.2);
+}
+.p-dropdown-trigger{
+    margin-left: 10px;
+}
+.p-datatable-thead{
+    font-size: 16px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+.p-column-header-content{
+    padding: 5px;
+    border: 1px solid white;
+    text-align: center;
+    height: 40px;
+}
+.p-column-header-content span{
+    width: 5px;
+    margin-left: 5px;
+}
+.p-column-header-content .p-column-title{
+    width: auto;
+}
+.p-paginator-bottom{
+    margin-top: 10px;
+}
+@media screen and (max-width: 767px){
+    .p-datatable-thead{
+        font-size: 12px;
+    }   
+}
